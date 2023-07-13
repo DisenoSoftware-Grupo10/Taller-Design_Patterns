@@ -8,6 +8,7 @@ import cardCreator.BasicCardCreator;
 import cardCreator.CardCreator;
 import cardCreator.PremiumCardCreator;
 import cardsType.Card;
+import FacadePattern.*;
 
 /**
  *
@@ -44,5 +45,13 @@ public class Client {
         tarjetaVIP.acreditar(1000);
         tarjetaVIP.pagar();
         
+
+        System.out.println("-------FACADE DEMO---------");
+        FachadaTiendaMinorista tiendaMinorista= new FachadaTiendaMinorista();
+        tiendaMinorista.usarElSistema("web");
+        tiendaMinorista.usarElSistema("telefonica");
+        tiendaMinorista.usarElSistema("movil");
+        tiendaMinorista.usarElSistema("cloud");
+
     }
 }
